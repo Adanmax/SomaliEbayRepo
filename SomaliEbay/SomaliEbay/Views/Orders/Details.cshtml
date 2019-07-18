@@ -1,0 +1,48 @@
+﻿@model SomaliEbay.Models.Order
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Order</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Qty)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Qty)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TotalCost)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TotalCost)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TotalPaid)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TotalPaid)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ISpaid)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ISpaid)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.product)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.product.ProducName)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
